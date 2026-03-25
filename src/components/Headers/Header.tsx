@@ -17,18 +17,18 @@ function Header() {
                 <button className='px-2 py-1.25 bg-blue-500 text-white rounded-md hover:bg-blue-600'>Create</button>
             </div>
             <div className=''>
-                <ul className='flex items-center gap-5'>
-                    <li>
+                <ul className='flex items-center gap-1'>
+                    <li className="hover:bg-gray-100 p-2 rounded-full hover:scale-115 duration-200">
                         <Mic size={19}/>
                     </li>
-                    <li>
+                    <li className="hover:bg-gray-100 p-2 rounded-full hover:scale-115 duration-200">
                         <Bell size={19}/>
                     </li>
-                    <li>
+                    <li className="hover:bg-gray-100 p-2 rounded-full hover:scale-115 duration-200">
                         <CircleQuestionMark size={19}/>
                     </li>
                     <li className=''>
-                        <div className='pt-1 pl-0.5 w-6 h-6 rounded-full bg-amber-600 text-black text-xs'>
+                        <div className='pt-2 pl-1.5 w-8 h-8 rounded-full bg-amber-600 text-white text-xs hover:scale-115 duration-200'>
                             <p>DM</p>
                         </div>
                     </li>

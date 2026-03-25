@@ -72,7 +72,7 @@ function Item({ icon, label, active, onClick, to }: ItemProps) {
           : "text-gray-700 hover:bg-gray-200"}`}
       onClick={onClick} to={to}    >
       {icon}
-      <span>{label}</span>
+      <span className="hover:scale-105 duration-200 w-full h-full">{label}</span>
     </Link>
   );
 }
