@@ -1,32 +1,9 @@
 {
   "boards": [
     {
-      "id": "1231aqd",
+      "id": "qYiO9rPMrjo",
       "title": "test",
-      "status": "Private"
-    },
-    {
-      "id": "ATVy_CknZ1w",
-      "title": "test",
-      "bgColor": "#1d4ed8",
-      "status": "Private"
-    },
-    {
-      "id": "6ztMCMDq1Ig",
-      "title": "asd",
-      "bgColor": "#1d4ed8",
-      "status": "Private"
-    },
-    {
-      "id": "FlB_vE20X8Y",
-      "title": "asd",
-      "bgColor": "#38bdf8",
-      "status": "Private"
-    },
-    {
-      "id": "DBdO35lYpas",
-      "title": "qweqw",
-      "bgColor": "#1d4ed8",
+      "bgColor": "#ec4899",
       "status": "Private"
     }
   ],

@@ -4,6 +4,7 @@ import Layout from "./Pages/Layout";
 import BoardsPage from "./Pages/BoardsPage";
 import TemplatesPage from "./Pages/TemplatesPage";
 import HomePage from "./Pages/HomePage";
+import BoardPage from "./components/Boards/BoardPage";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
             <Route path="/templates" element={<TemplatesPage />} />
             <Route path="/Home" element={<HomePage />} />
           </Route>
+          <Route path="/board/:id" element={<BoardPage />} />
         </Routes>
       </BrowserRouter>
     </>
