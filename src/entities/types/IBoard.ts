@@ -1,6 +1,7 @@
 export interface IBoard{
     id: string,
     title: string,
-    status: "Private" | "Public",
+    status: string,
     columnsIds?: string[]
+    bgColor: string
 }

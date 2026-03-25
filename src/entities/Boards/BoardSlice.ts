@@ -2,18 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import type { IBoard } from "../types/IBoard";
 import { createBoard, fetchBoards, removeBoard, updateBoard } from "../../shared/api/api";
 
-export const initialState: IBoard[] = [
-    {
-        id: '1231aqd',
-        title: 'test',
-        status: 'Private'
-    },
-    {
-        id: '1231a2qd',
-        title: 'teswt',
-        status: 'Public'
-    }
-]
+export const initialState: IBoard[] = []
 
 export const boardSlice = createSlice({
     name: "boards",

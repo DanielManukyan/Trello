@@ -1,4 +1,6 @@
 import type { IBoard } from "../../entities/types/IBoard"
+import { Board } from "./Board"
+import CreateBoardCard from './CreateBoardCard';
 
 interface IBoardListProps {
     boards: IBoard[]
@@ -7,14 +9,13 @@ interface IBoardListProps {
 const BoardList: React.FC<IBoardListProps> = (props) => {
     const { boards } = props
     return (
-        <div className="flex items-center gap-4">
+        <div className="grid grid-cols-4 w-full gap-3 mt-4">
             {boards.map((board) => (
-                <div key={board.id}>
-                    <h1>{board.title}</h1>
-                    <p>Status: {board.status}</p>
-                </div>
+                <Board key={board.id} id={board.id} status={board.status} bgColor={board.bgColor} title={board.title}/>
             ))}
+            <CreateBoardCard />
         </div>
+        
     )
 }
 
