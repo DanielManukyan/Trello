@@ -10,7 +10,7 @@ const ColumnList: React.FC<IColumnListProps> = (props) => {
     return (
         <div className="flex flex-row gap-4">
             {columns.map((column) => (
-                <Column key={column.id} title={column.title} id={""} boardId={""} tasks={[]} />
+                <Column key={column.id} title={column.title} id={column.id} boardId={column.boardId} tasks={column.tasks} />
             ))}
         </div>
     )
