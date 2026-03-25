@@ -13,10 +13,10 @@ function Layout() {
             </header>
 
             <div className="flex flex-1">
-                <aside className="w-64 text-white">
+                <aside className="w-75 text-white">
                     <SideMenu />
                 </aside>
-                <main className="flex-1 p-4 overflow-auto">
+                <main className="flex-1 px-6 py-9 overflow-auto">
                     <Outlet />
                 </main>
             </div>

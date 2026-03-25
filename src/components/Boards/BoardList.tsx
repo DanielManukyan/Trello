@@ -7,7 +7,7 @@ interface IBoardListProps {
 const BoardList: React.FC<IBoardListProps> = (props) => {
     const { boards } = props
     return (
-        <div>
+        <div className="flex items-center gap-4">
             {boards.map((board) => (
                 <div key={board.id}>
                     <h1>{board.title}</h1>

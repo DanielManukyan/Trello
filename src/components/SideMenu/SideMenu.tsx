@@ -7,7 +7,7 @@ export default function SideMenu() {
   const [isActive, setActive] = useState("Boards");
 
   return (
-    <div className="flex h-[calc(100%-60px)] pl-6 w-60">
+    <div className="flex h-[calc(100%-60px)] pl-6 w-full">
       {open && (
         <div
           className="fixed inset-0 bg-black/30 z-40 sm:hidden"
