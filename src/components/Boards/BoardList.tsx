@@ -1,4 +1,4 @@
-import type { IBoard } from "../../types/IBoard"
+import type { IBoard } from "../../entities/types/IBoard"
 
 interface IBoardListProps {
     boards: IBoard[]

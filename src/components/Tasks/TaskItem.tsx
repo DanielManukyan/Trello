@@ -1,4 +1,4 @@
-import { type ITask } from '../../types/ITask';
+import { type ITask } from '../../entities/types/ITask';
 
 const TaskItem: React.FC<ITask> = (props) => {
     const { id, title, completed } = props

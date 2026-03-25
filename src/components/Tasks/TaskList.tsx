@@ -1,4 +1,4 @@
-import { type ITask } from "../../types/ITask";
+import { type ITask } from "../../entities/types/ITask";
 
 interface ITaskListProps {
     tasks: ITask[]

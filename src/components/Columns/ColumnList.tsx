@@ -1,4 +1,4 @@
-import type { IColumn } from "../../types/IColumn"
+import type { IColumn } from "../../entities/types/IColumn"
 import { Column } from "./Column";
 
 interface IColumnListProps {
