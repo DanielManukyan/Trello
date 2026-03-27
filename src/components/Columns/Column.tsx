@@ -7,6 +7,7 @@ const Column: React.FC<IColumn> = (props) => {
         <div key={id}>
             <h2>{title}</h2>
             <div>
+                task
                 <TaskList tasks={tasks} />
             </div>
         </div>

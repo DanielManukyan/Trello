@@ -7,5 +7,15 @@
       "status": "Private"
     }
   ],
-  "$schema": "./node_modules/json-server/schema.json"
+  "columns": [
+      {
+        "id": "qYiO9rPMrjqwe",
+        "title": "test",
+        "boardId": "qYiO9rPMrjo",
+        "tasks": []
+      }
+  ],
+  "tasks": [
+
+  ]
 }

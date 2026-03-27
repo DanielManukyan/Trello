@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import boardReducer from '../entities/Boards/BoardSlice'
+import columnReducer from '../entities/Columns/ColumnSlice'
 
 export const store = configureStore({
     reducer: {
-        boards: boardReducer
+        boards: boardReducer,
+        columns: columnReducer,
     }
 });
 
