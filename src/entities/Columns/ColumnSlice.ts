@@ -12,10 +12,10 @@ export const columnSlice = createSlice({
             state.push(action.payload)
         },
         deleteColumn: (state, action) => {
-            return state.filter(board => board.id !== action.payload)
+            return state.filter(column => column.id !== action.payload)
         },
         editColumn: (state, action) => {
-            const index = state.findIndex(b => b.id === action.payload.id)
+            const index = state.findIndex(c => c.id === action.payload.id)
             if (index !== -1) {
                 state[index] = action.payload
             }
@@ -30,10 +30,10 @@ export const columnSlice = createSlice({
         state.push(action.payload);
       })
       .addCase(removeColumn.fulfilled, (state, action) => {
-        return state.filter(board => board.id !== action.payload);
+        return state.filter(column => column.id !== action.payload);
       })
       .addCase(updateColumn.fulfilled, (state, action) => {
-        const index = state.findIndex(b => b.id === action.payload.id);
+        const index = state.findIndex(c => c.id === action.payload.id);
         if (index !== -1) state[index] = action.payload;
       });
   },

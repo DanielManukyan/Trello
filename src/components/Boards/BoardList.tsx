@@ -8,6 +8,11 @@ interface IBoardListProps {
 
 const BoardList: React.FC<IBoardListProps> = (props) => {
     const { boards } = props
+    if (!boards.length) {
+        return (
+            <div className="w-full text-center text-gray-400 mt-8">Нет досок</div>
+        );
+    }
     return (
         <div className="grid grid-cols-4 w-full gap-3 mt-4">
             {boards.map((board) => (
@@ -15,8 +20,7 @@ const BoardList: React.FC<IBoardListProps> = (props) => {
             ))}
             <CreateBoardCard />
         </div>
-        
-    )
+    );
 }
 
 export { BoardList }

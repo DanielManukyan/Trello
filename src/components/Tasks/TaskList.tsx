@@ -1,20 +1,34 @@
 import { type ITask } from "../../entities/types/ITask";
+import { TaskItem } from "./TaskItem";
+import { Draggable } from "react-beautiful-dnd";
+
 
 interface ITaskListProps {
-    tasks: ITask[]
+    tasks: ITask[];
+    columnId: string;
 }
 
-const TaskList: React.FC<ITaskListProps> = (props) => {
-    const { tasks } = props;
-    return ( 
-        <div>
-            {tasks.map((task) => (
-                <div key={task.id}>
-                    {task.title}
-                </div>
+const TaskList: React.FC<ITaskListProps> = ({ tasks = [] }) => {
+    if (!tasks.length) {
+        return <div className="text-gray-400 text-center py-2">Нет задач</div>;
+    }
+    return (
+        <div className="flex flex-col gap-2">
+            {tasks.map((task, idx) => (
+                <Draggable draggableId={task.id} index={idx} key={task.id}>
+                    {(provided) => (
+                        <div
+                            ref={provided.innerRef}
+                            {...provided.draggableProps}
+                            {...provided.dragHandleProps}
+                        >
+                            <TaskItem {...task} />
+                        </div>
+                    )}
+                </Draggable>
             ))}
         </div>
-     );
-}
+    );
+};
 
 export { TaskList };

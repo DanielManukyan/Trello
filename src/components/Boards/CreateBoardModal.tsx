@@ -25,7 +25,7 @@ const colors = [
 
 function CreateBoardModal({ open, onClose }: ModalProps) {
   const [title, setTitle] = useState("");
-  const [bg, setBg] = useState<string | null>(backgrounds[0]);
+  const [bg, setBg] = useState<string>(backgrounds[0]);
   const [status, setStatus] = useState("Private");
   const dispatch = useAppDispatch()
 

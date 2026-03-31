@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { IBoard } from "../types/IBoard";
-import { createBoard, fetchBoards, removeBoard, updateBoard } from "../../shared/api/api";
+import { createBoard, fetchBoards, removeBoard, updateBoard, updateColumnsOrder } from "../../shared/api/api";
 
 export const initialState: IBoard[] = []
 
@@ -35,6 +35,10 @@ export const boardSlice = createSlice({
       .addCase(updateBoard.fulfilled, (state, action) => {
         const index = state.findIndex(b => b.id === action.payload.id);
         if (index !== -1) state[index] = action.payload;
+      })
+      .addCase(updateColumnsOrder.fulfilled, (state, action) => {
+        const idx = state.findIndex(b => b.id === action.payload.id);
+        if (idx !== -1) state[idx] = action.payload;
       });
   },
 });
