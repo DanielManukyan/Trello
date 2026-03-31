@@ -9,6 +9,12 @@
         "0cTuhDWTLxs",
         "qYiO9rPMrjqwe"
       ]
+    },
+    {
+      "id": "ubebOsCEidM",
+      "title": "new",
+      "bgColor": "#38bdf8",
+      "status": "Private"
     }
   ],
   "columns": [
@@ -23,6 +29,12 @@
       "title": "2",
       "boardId": "qYiO9rPMrjo",
       "order": 1
+    },
+    {
+      "id": "m-eE8SGUOks",
+      "title": "e",
+      "boardId": "ubebOsCEidM",
+      "order": 0
     }
   ],
   "tasks": [
@@ -31,13 +43,13 @@
       "title": "1",
       "completed": false,
       "columnId": "NllVFjI7Zds",
-      "order": 0
+      "order": 1
     },
     {
       "id": "VIu-7fdnqB4",
       "title": "2",
       "completed": false,
-      "columnId": "bUDOe9tsqdI",
+      "columnId": "NllVFjI7Zds",
       "order": 0
     }
   ],
