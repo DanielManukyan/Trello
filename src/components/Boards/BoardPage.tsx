@@ -7,6 +7,8 @@ import { ColumnList } from "../Columns/ColumnList";
 import { DragDropContext } from "react-beautiful-dnd";
 import type { DropResult } from "react-beautiful-dnd";
 import type { IColumn } from "../../entities/types/IColumn";
+import Header from "../Headers/Header";
+import BoardPageHeader from '../Headers/BoardPageHeader';
 
 
 function BoardPage() {
@@ -16,6 +18,7 @@ function BoardPage() {
             dispatch(fetchColumns());
             dispatch(fetchTasks());
         }, [dispatch]);
+        const board = useAppSelector(state => state.boards.find(b => b.id === id));
         const columns: IColumn[] = useAppSelector(state => state.columns);
         const tasks = useAppSelector(state => state.tasks);
 
@@ -65,7 +68,11 @@ function BoardPage() {
     return (
         <DragDropContext onDragEnd={onDragEnd}>
             <div>
-                <ColumnList columns={boardColumns} boardId={id || ''} />
+                <Header />
+                <BoardPageHeader boardName={board?.title || 'Доска'} />
+                <div className="p-4">
+                    <ColumnList columns={boardColumns} boardId={id || ''} />
+                </div>
             </div>
         </DragDropContext>
     );
