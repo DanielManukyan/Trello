@@ -53,15 +53,22 @@
     {
       "id": "dcz8dN_FOc0",
       "title": "1",
-      "completed": false,
-      "columnId": "bUDOe9tsqdI",
+      "completed": true,
+      "columnId": "NllVFjI7Zds",
       "order": 0
     },
     {
       "id": "VIu-7fdnqB4",
       "title": "2",
+      "completed": true,
+      "columnId": "wViziWzJKJM",
+      "order": 0
+    },
+    {
+      "id": "3z0anOUnYgU",
+      "title": "1",
       "completed": false,
-      "columnId": "bUDOe9tsqdI",
+      "columnId": "NllVFjI7Zds",
       "order": 1
     }
   ],
