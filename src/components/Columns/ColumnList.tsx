@@ -38,6 +38,8 @@ const ColumnList: React.FC<ColumnListProps> = ({ columns = [], boardId = "" } = 
         setColumnName("");
         setShowInput(false);
         setLoading(false);
+
+        return false;
     };
 
     return (
@@ -85,6 +87,7 @@ const ColumnList: React.FC<ColumnListProps> = ({ columns = [], boardId = "" } = 
                                 className="bg-blue-500 text-white px-2 py-1 rounded"
                                 onClick={handleCreateColumn}
                                 disabled={loading}
+                                type="button"
                             >
                                 {loading ? "Создание..." : "Создать"}
                             </button>
