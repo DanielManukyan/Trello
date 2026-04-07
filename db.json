@@ -28,13 +28,13 @@
       "id": "NllVFjI7Zds",
       "title": "тест",
       "boardId": "qYiO9rPMrjo",
-      "order": 1
+      "order": 0
     },
     {
       "id": "bUDOe9tsqdI",
       "title": "2",
       "boardId": "qYiO9rPMrjo",
-      "order": 0
+      "order": 2
     },
     {
       "id": "m-eE8SGUOks",
@@ -46,21 +46,33 @@
       "id": "wViziWzJKJM",
       "title": "4",
       "boardId": "qYiO9rPMrjo",
-      "order": 2
+      "order": 1
+    },
+    {
+      "id": "9Ztw-QxUmgA",
+      "title": "new",
+      "boardId": "qYiO9rPMrjo",
+      "order": 3
+    },
+    {
+      "id": "BRuvMnoW3zY",
+      "title": "new",
+      "boardId": "qYiO9rPMrjo",
+      "order": 4
     }
   ],
   "tasks": [
     {
       "id": "dcz8dN_FOc0",
       "title": "1",
-      "completed": true,
-      "columnId": "NllVFjI7Zds",
+      "completed": false,
+      "columnId": "bUDOe9tsqdI",
       "order": 0
     },
     {
       "id": "VIu-7fdnqB4",
       "title": "2",
-      "completed": true,
+      "completed": false,
       "columnId": "wViziWzJKJM",
       "order": 0
     },
@@ -68,8 +80,22 @@
       "id": "3z0anOUnYgU",
       "title": "1",
       "completed": false,
-      "columnId": "NllVFjI7Zds",
+      "columnId": "wViziWzJKJM",
       "order": 1
+    },
+    {
+      "id": "3aI9QDXaGNc",
+      "title": "new",
+      "completed": false,
+      "columnId": "NllVFjI7Zds",
+      "order": 0
+    },
+    {
+      "id": "cKqBLmL0UEI",
+      "title": "new",
+      "completed": false,
+      "columnId": "9Ztw-QxUmgA",
+      "order": 0
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

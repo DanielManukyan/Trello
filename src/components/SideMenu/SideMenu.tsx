@@ -4,7 +4,12 @@ import { Link } from "react-router-dom";
 
 export default function SideMenu() {
   const [open, setOpen] = useState(false);
-  const [isActive, setActive] = useState("Boards");
+  const [isActive, setActive] = useState("");
+  const [togleMenu, setTogleMenu] = useState(false);
+
+  const handleToggleMenu = () => {
+    setTogleMenu(!togleMenu);
+  }
 
   return (
     <div className="flex h-[calc(100%-60px)] pl-6 w-full">
@@ -27,9 +32,31 @@ export default function SideMenu() {
           </button>
         </div>
           <nav className="px-2 space-y-1 mt-2">
-            <Item to="/" icon={<Layout size={18} />} label="Boards" onClick={() => setActive("Boards")} active={isActive === "Boards"} />
-            <Item to="/templates" icon={<Plus size={18} />} label="Templates" onClick={() => setActive("Templates")} active={isActive === "Templates"} />
-            <Item to="/home" icon={<Activity size={18} />} label="Home" onClick={() => setActive("Home")} active={isActive === "Home"} />
+            <ItemWithLogo to="/" icon={<Layout size={18} />} label="Boards" onClick={() => {setActive("Boards"); setTogleMenu(false)}} active={isActive === "Boards"} />
+            <div onClick={handleToggleMenu} className="cursor-pointer">
+                <ItemWithLogo to="/templates" icon={<Plus size={18} />} label="Templates" onClick={() => {setActive("Templates"); setTogleMenu(false)}} active={isActive === "Templates"} />
+                <div>
+                    {togleMenu && (
+                        <div className="ml-6">
+                            <Item to="/templates/Buisnes" label="Buisnes" onClick={() => setActive("Buisnes")} active={isActive === "Buisnes"}/>
+                            <Item to="/templates/Design" label="Design" onClick={() => setActive("Design")} active={isActive === "Design"} />
+                            <Item to="/templates/Education" label="Education" onClick={() => setActive("Education")} active={isActive === "Education"} />
+                            <Item to="/templates/Engineering" label="Engineering" onClick={() => setActive("Engineering")} active={isActive === "Engineering"} />
+                            <Item to="/templates/Marketing" label="Marketing" onClick={() => setActive("Marketing")} active={isActive === "Marketing"} />
+                            <Item to="/templates/Hr-&-Operations" label="Hr & Operations" onClick={() => setActive("Hr & Operations")} active={isActive === "Hr & Operations"} />
+                            <Item to="/templates/Personal" label="Personal" onClick={() => setActive("Personal")} active={isActive === "Personal"} />
+                            <Item to="/templates/Productivity" label="Productivity" onClick={() => setActive("Productivity")} active={isActive === "Productivity"} />
+                            <Item to="/templates/Product-management" label="Product management" onClick={() => setActive("Product management")} active={isActive === "Product management"} />
+                            <Item to="/templates/Project-management" label="Project management" onClick={() => setActive("Project management")} active={isActive === "Project management"} />
+                            <Item to="/templates/Remote-work" label="Remote Work" onClick={() => setActive("Remote Work")} active={isActive === "Remote Work"} />
+                            <Item to="/templates/Sales" label="Sales" onClick={() => setActive("Sales")} active={isActive === "Sales"} />
+                            <Item to="/templates/Support" label="Support" onClick={() => setActive("Support")} active={isActive === "Support"} />
+                            <Item to="/templates/Team-management" label="Team Management" onClick={() => setActive("Team Management")} active={isActive === "Team Management"} />
+                        </div>
+                    )}  
+                </div>
+            </div>
+            <ItemWithLogo to="/home" icon={<Activity size={18} />} label="Home" onClick={() => {setActive("Home"); setTogleMenu(false)}} active={isActive === "Home"} />
           </nav>
 
         <div className="my-3 border-t border-gray-400" />
@@ -56,14 +83,14 @@ export default function SideMenu() {
 }
 
 type ItemProps = {
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
   label: string;
   active?: boolean;
   onClick: () => void;
   to: string;
 };
 
-function Item({ icon, label, active, onClick, to }: ItemProps) {
+function ItemWithLogo({ icon, label, active, onClick, to }: ItemProps) {
   return (
     <Link
       className={`flex items-center gap-3 px-3 py-2 rounded-lg cursor-pointer text-sm
@@ -72,6 +99,19 @@ function Item({ icon, label, active, onClick, to }: ItemProps) {
           : "text-gray-700 hover:bg-gray-200"}`}
       onClick={onClick} to={to}    >
       {icon}
+      <span className="hover:scale-105 duration-200 w-full h-full">{label}</span>
+    </Link>
+  );
+}
+
+function Item({ label, active, onClick, to }: ItemProps) {
+  return (
+    <Link
+      className={`flex items-center gap-3 px-3 py-2 rounded-lg cursor-pointer text-sm
+        ${active
+          ? "bg-blue-100 text-blue-600"
+          : "text-gray-700 hover:bg-gray-200"}`}
+      onClick={onClick} to={to}>
       <span className="hover:scale-105 duration-200 w-full h-full">{label}</span>
     </Link>
   );
