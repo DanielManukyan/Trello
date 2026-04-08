@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function SideMenu() {
   const [open, setOpen] = useState(false);
-  const [isActive, setActive] = useState("");
+  const [isActive, setActive] = useState("Boards");
   const [togleMenu, setTogleMenu] = useState(false);
 
   const handleToggleMenu = () => {

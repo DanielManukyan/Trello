@@ -21,6 +21,36 @@
       "title": "test",
       "bgColor": "#38bdf8",
       "status": "Public"
+    },
+    {
+      "id": "t_y_DlEhOs0",
+      "title": "new",
+      "bgColor": "/images/bg1.jpg",
+      "status": "Private"
+    },
+    {
+      "id": "KUGiAQOcXyo",
+      "title": "test",
+      "bgColor": "/images/bg1.jpg",
+      "status": "Private"
+    },
+    {
+      "id": "OZxhkTZWCP8",
+      "title": "ewn",
+      "bgColor": "/images/bg1.jpg",
+      "status": "Private"
+    },
+    {
+      "id": "BTL_699nQ-k",
+      "title": "ets",
+      "bgColor": "#1d4ed8",
+      "status": "Private"
+    },
+    {
+      "id": "ClqAFW7dMhk",
+      "title": "fail",
+      "bgColor": "#38bdf8",
+      "status": "Private"
     }
   ],
   "columns": [
@@ -72,14 +102,14 @@
     {
       "id": "VIu-7fdnqB4",
       "title": "2",
-      "completed": false,
+      "completed": true,
       "columnId": "wViziWzJKJM",
       "order": 0
     },
     {
       "id": "3z0anOUnYgU",
       "title": "1",
-      "completed": false,
+      "completed": true,
       "columnId": "wViziWzJKJM",
       "order": 1
     },

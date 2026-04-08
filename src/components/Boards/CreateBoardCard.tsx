@@ -12,7 +12,7 @@ function CreateBoardCard() {
     }
 
     return ( 
-        <div>
+        <div className="relative">
             <div className="w-full text-center shadow-sm mx-auto h-25 rounded-md p-2">
                 <button onClick={handleAdd} className="w-full h-full cursor-pointer">
                     <h1>Create new Board</h1>

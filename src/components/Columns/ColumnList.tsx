@@ -52,7 +52,7 @@ const ColumnList: React.FC<ColumnListProps> = ({ columns = [], boardId = "" } = 
                         {...provided.droppableProps}
                     >
                         {sortedColumns.length === 0 && (
-                            <div className="text-gray-400 mt-8">Нет колонок</div>
+                            <div className="text-gray-400 w-40 p-4">Нет колонок !</div>
                         )}
                         {sortedColumns.map((column, idx) => (
                             <dnd.Draggable draggableId={column.id} index={idx} key={column.id}>

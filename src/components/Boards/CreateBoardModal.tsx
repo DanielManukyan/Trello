@@ -49,7 +49,7 @@ function CreateBoardModal({ open, onClose }: ModalProps) {
     };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+    <div className="absolute top-0 z-50 flex items-center justify-center bg-black/40">
       <div className="w-100 bg-white rounded-xl shadow-lg p-4 relative">
         
         <div className="flex justify-center items-center mb-4 relative">
@@ -61,8 +61,6 @@ function CreateBoardModal({ open, onClose }: ModalProps) {
             ✕
           </button>
         </div>
-
-
         <div
           className="w-full h-28 rounded-md mb-4 bg-cover bg-center flex items-center justify-center"
           style={{

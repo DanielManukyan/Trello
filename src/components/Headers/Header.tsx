@@ -1,12 +1,23 @@
 import { Mic, Bell, CircleQuestionMark, Grip } from "lucide-react";
 import Search from './Search';
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import CreateBoardModal from "../Boards/CreateBoardModal";
 
 function Header() { 
     const navigate = useNavigate()
+    const [modal, setModal] = useState(false)
 
     const handleLogoClick = () => {
         navigate('/')
+    }
+
+    const handleClick = () => {
+        setModal(!modal)
+    }
+
+    const handelClose = () => {
+        setModal(false)
     }
 
     return ( 
@@ -23,9 +34,12 @@ function Header() {
 
             <div className='flex items-center gap-2 w-full'>
                 <Search />
-                <button className='px-2 py-1.25 bg-blue-500 text-white rounded-md hover:bg-blue-600'>
+                <button onClick={handleClick} className='px-2 py-1.25 bg-blue-500 text-white rounded-md hover:bg-blue-600'>
                     Create
                 </button>
+                {modal && (
+                    <CreateBoardModal open={modal} onClose={handelClose} />
+                )}
             </div>
 
             <ul className='flex items-center gap-1'>

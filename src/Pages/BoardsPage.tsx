@@ -13,7 +13,7 @@ function BoardsPage() {
     }, [dispatch]);
 
     return (
-        <div className="h-full">
+        <div className="h-full px-30 md:px-20 sm:px-10">
             <h1 className="text-xl font-bold text-gray-600">Your Workspace</h1>
             <div className="mt-4">
                 <div className="flex items-center justify-between rounded-lg w-full">
