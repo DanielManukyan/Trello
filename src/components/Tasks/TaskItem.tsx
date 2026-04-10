@@ -3,10 +3,12 @@ import { type ITask } from '../../entities/types/ITask';
 import { useAppSelector, useAppDispatch } from '../../shared/lib/hooks';
 import { toggleTask } from '../../shared/api/api';
 import React from 'react';
+import TaskModal from './TaskModal/TaskModal';
 
 const TaskItem: React.FC<ITask> = ({ title, id }) => {
   const dispatch = useAppDispatch();
   const [hover, setHover] = useState(false);
+  const [modal, setModal] = useState(false);
 
   const task = useAppSelector((state) =>
     state.tasks.find((t) => t.id === id)
@@ -15,8 +17,11 @@ const TaskItem: React.FC<ITask> = ({ title, id }) => {
 
   const visible = hover || completed; 
 
+  const handleOpenTaskModal = () => setModal(true);
+
+  const handleCloseTaskModal = () => setModal(false);
   return (
-    <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className="bg-white rounded-xl shadow-sm p-3 hover:bg-gray-50 cursor-pointer transition-all duration-200">
+    <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} onClick={handleOpenTaskModal} className="bg-white rounded-xl shadow-sm p-3 hover:bg-gray-50 cursor-pointer transition-all duration-200">
       <div className="flex items-center justify-between">
 
         <div className="flex items-center">
@@ -32,6 +37,9 @@ const TaskItem: React.FC<ITask> = ({ title, id }) => {
           ✔
         </span>
       </div>
+      {modal && task && (
+        <TaskModal onClose={handleCloseTaskModal} task={task} />
+      )}
     </div>
   );
 };

@@ -58,7 +58,7 @@
       "id": "NllVFjI7Zds",
       "title": "тест",
       "boardId": "qYiO9rPMrjo",
-      "order": 0
+      "order": 1
     },
     {
       "id": "bUDOe9tsqdI",
@@ -76,7 +76,7 @@
       "id": "wViziWzJKJM",
       "title": "4",
       "boardId": "qYiO9rPMrjo",
-      "order": 1
+      "order": 0
     },
     {
       "id": "9Ztw-QxUmgA",
@@ -104,13 +104,13 @@
       "title": "2",
       "completed": true,
       "columnId": "wViziWzJKJM",
-      "order": 0
+      "order": 1
     },
     {
       "id": "3z0anOUnYgU",
       "title": "1",
       "completed": true,
-      "columnId": "NllVFjI7Zds",
+      "columnId": "wViziWzJKJM",
       "order": 0
     },
     {
@@ -118,7 +118,7 @@
       "title": "new",
       "completed": false,
       "columnId": "wViziWzJKJM",
-      "order": 1
+      "order": 2
     },
     {
       "id": "cKqBLmL0UEI",
