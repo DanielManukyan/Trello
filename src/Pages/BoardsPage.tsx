@@ -1,4 +1,4 @@
-import { BoardList } from "../components/Boards/BoardList";
+import BoardList from "../components/Boards/BoardList";
 import { fetchBoards } from "../shared/api/api";
 import { Columns3, User, Settings, BriefcaseBusiness } from "lucide-react"
 import { useAppDispatch, useAppSelector } from "../shared/lib/hooks";
@@ -13,7 +13,7 @@ function BoardsPage() {
     }, [dispatch]);
 
     return (
-        <div className="h-full px-30 md:px-20 sm:px-10">
+        <div className="h-full lg:px-6 md:px-4 sm:px-2">
             <h1 className="text-xl font-bold text-gray-600">Your Workspace</h1>
             <div className="mt-4">
                 <div className="flex items-center justify-between rounded-lg w-full">

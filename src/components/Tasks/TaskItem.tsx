@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { type ITask } from '../../entities/types/ITask';
 import { useAppSelector, useAppDispatch } from '../../shared/lib/hooks';
 import { toggleTask } from '../../shared/api/api';
+import React from 'react';
 
 const TaskItem: React.FC<ITask> = ({ title, id }) => {
   const dispatch = useAppDispatch();
@@ -35,4 +36,4 @@ const TaskItem: React.FC<ITask> = ({ title, id }) => {
   );
 };
 
-export { TaskItem };
+export default React.memo(TaskItem);

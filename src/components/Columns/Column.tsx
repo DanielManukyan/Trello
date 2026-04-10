@@ -1,6 +1,6 @@
 
 
-import { TaskList } from "../Tasks/TaskList";
+import TaskList from "../Tasks/TaskList";
 import { Droppable } from "react-beautiful-dnd";
 import React, { useState, useMemo } from "react";
 import { useAppDispatch, useAppSelector } from "../../shared/lib/hooks";
@@ -88,4 +88,4 @@ const Column: React.FC<ColumnProps> = React.memo(({ id, title }) => {
         </div>
     );
 });
-export { Column };
+export default React.memo(Column);

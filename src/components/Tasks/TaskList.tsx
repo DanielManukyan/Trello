@@ -1,5 +1,6 @@
+import React from "react";
 import { type ITask } from "../../entities/types/ITask";
-import { TaskItem } from "./TaskItem";
+import TaskItem from "./TaskItem";
 import { Draggable } from "react-beautiful-dnd";
 
 
@@ -31,4 +32,4 @@ const TaskList: React.FC<ITaskListProps> = ({ tasks = [] }) => {
     );
 };
 
-export { TaskList };
+export default React.memo(TaskList);

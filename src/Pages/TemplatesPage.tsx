@@ -1,9 +1,9 @@
 import { Search } from "lucide-react";
-import TemplatesList from '../components/templates/templatesList';
+import TemplatesList from '../components/templates/TemplatesList';
 
 function TemplatesPage() {
     return ( 
-        <div className="flex flex-col gap-8 px-34 md:px-24 sm:px-14">
+        <div className="flex flex-col gap-8 lg:px-14 md:px-8 sm:px-4">
             <div className="flex items-center justify-between w-full">
                 <h1 className="text-xl font-bold">Featured categories</h1>
                 <div className="flex items-center gap-2 w-auto relative">

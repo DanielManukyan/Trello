@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import type { IBoard } from "../../entities/types/IBoard"
+import React from "react"
 
 const Board: React.FC<IBoard> = (props) => {
     const { id, title, status, bgColor } = props
@@ -18,4 +19,4 @@ const Board: React.FC<IBoard> = (props) => {
     )
 }
 
-export { Board }
+export default React.memo(Board);

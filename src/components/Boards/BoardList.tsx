@@ -1,5 +1,6 @@
+import React from "react";
 import type { IBoard } from "../../entities/types/IBoard"
-import { Board } from "./Board"
+import Board from "./Board"
 import CreateBoardCard from './CreateBoardCard';
 
 interface IBoardListProps {
@@ -23,4 +24,4 @@ const BoardList: React.FC<IBoardListProps> = (props) => {
     );
 }
 
-export { BoardList }
+export default React.memo(BoardList);

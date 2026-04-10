@@ -9,7 +9,7 @@ import {
   updateColumn
 } from "../../shared/api/api";
 
-import { ColumnList } from "../Columns/ColumnList";
+import ColumnList from "../Columns/ColumnList";
 import { DragDropContext, type DropResult } from "react-beautiful-dnd";
 import type { IColumn } from "../../entities/types/IColumn";
 import BoardPageHeader from '../Headers/BoardPageHeader';

@@ -96,7 +96,7 @@
       "id": "dcz8dN_FOc0",
       "title": "1",
       "completed": false,
-      "columnId": "bUDOe9tsqdI",
+      "columnId": "9Ztw-QxUmgA",
       "order": 0
     },
     {
@@ -110,22 +110,22 @@
       "id": "3z0anOUnYgU",
       "title": "1",
       "completed": true,
-      "columnId": "wViziWzJKJM",
-      "order": 1
+      "columnId": "NllVFjI7Zds",
+      "order": 0
     },
     {
       "id": "3aI9QDXaGNc",
       "title": "new",
       "completed": false,
-      "columnId": "NllVFjI7Zds",
-      "order": 0
+      "columnId": "wViziWzJKJM",
+      "order": 1
     },
     {
       "id": "cKqBLmL0UEI",
       "title": "new",
       "completed": false,
       "columnId": "9Ztw-QxUmgA",
-      "order": 0
+      "order": 1
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

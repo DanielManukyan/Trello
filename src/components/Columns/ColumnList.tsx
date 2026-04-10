@@ -1,7 +1,7 @@
 
 
 import type { IColumn } from "../../entities/types/IColumn";
-import { Column } from "./Column";
+import Column from "./Column";
 import React, { useState } from "react";
 import { useAppDispatch } from "../../shared/lib/hooks";
 import { nanoid } from "nanoid";
@@ -110,4 +110,4 @@ const ColumnList: React.FC<ColumnListProps> = ({ columns = [], boardId = "" } = 
         </div>
     );
 };
-export { ColumnList }
+export default React.memo(ColumnList);
